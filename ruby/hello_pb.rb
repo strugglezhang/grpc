@@ -11,8 +11,15 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     add_message "HelloResponse" do
       optional :name, :string, 1
     end
+    add_message "WllRequest" do
+    end
+    add_message "WllResponse" do
+      optional :name, :string, 1
+    end
   end
 end
 
 HelloRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("HelloRequest").msgclass
 HelloResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("HelloResponse").msgclass
+WllRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("WllRequest").msgclass
+WllResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("WllResponse").msgclass

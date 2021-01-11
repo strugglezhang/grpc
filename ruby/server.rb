@@ -4,9 +4,13 @@ require 'grpc'
 require 'hello_services_pb'
 
 class GreeterServer < NameService::Service
-  def say_hello(hello_req, _unused_call)
-    HelloResponse.new(name: "Hello #{hello_req.name}")
-  end
+    def say_hello(hello_req, _unused_call)
+        HelloResponse.new(name: "Hello #{hello_req.name}")
+    end
+
+    def say_wll(hello_req, _unused_call)
+        WllResponse.new(name: "臭狗屎")
+    end
 end
 
 s = GRPC::RpcServer.new

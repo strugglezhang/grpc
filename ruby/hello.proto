@@ -8,6 +8,14 @@ message HelloResponse{
   string name = 1;
 }
 
+message WllRequest{
+}
+
+message WllResponse{
+  string name = 1;
+}
+
 service NameService{
   rpc sayHello(HelloRequest) returns (HelloResponse) {}
+  rpc sayWll(WllRequest) returns (WllResponse) {}
 }
